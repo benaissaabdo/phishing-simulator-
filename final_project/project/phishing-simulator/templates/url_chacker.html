@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Protection</title>
+    </head>
+    <body class = "chacker">
+    <p>Check The URL</p>
+    <form action = "/url_chacker" method = "post">
+        <input autocomplete = "off" autofocus placeholder = "URL" name = "url" type = "text">
+        <button type = "submit">Check</button>
+    </form>
+        {% if result %}
+        {% if result == "safe" %}
+            <p style="color: green; font-size: 30px;"> {{ result }} </p>
+        {% elif result == "Suspicious" %}
+            <p style="color: orange; font-size: 30px;"> {{ result }} </p>
+        {% elif result == "unknown" %}
+            <p style="color: red; font-size: 30px;"> {{ result }} </p>
+        {% endif %}
+    {% endif %}
+    </body>
+</html>

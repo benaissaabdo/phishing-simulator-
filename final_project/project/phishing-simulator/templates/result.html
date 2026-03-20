@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>victim</title>
+    </head>
+    <body class = "result">
+        <h3 class = "message">{You Fell For a phishing Attack!}</h3>
+        <p class = "inphormation">Username: {{ username[:2] }}***** </p>
+        <p class = "inphormation">Password: {{ password[:2] }}***** </p>
+
+        <p class = "victims">Victims: {{ attempts[-1].username_lenght }}</p>
+        <p class = "victims">Time: {{ attempts[-1].time }} </p>
+        <h5 class = "message">You Clicked Without Verifying The Link</h5>
+        <h5 class = "message">The Page May Look Familiar, But It's Fake!</h5>
+        Avoid Falling Victim To Phishing Scams<a href = "/url_chacker">Click Here</a>
+
+    </body>
+</html>
